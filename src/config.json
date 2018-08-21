@@ -1,0 +1,9 @@
+{
+  "mode": "dev",
+  "prod": {
+    "api": "http://localhost/amdb/"
+  },
+  "dev": {
+    "api": "http://localhost:4040/amdb/"
+  }
+}

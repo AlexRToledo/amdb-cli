@@ -1,0 +1,14 @@
+header {
+  nav {
+    box-shadow: 0 1px 0px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    .navbar-menu {
+      .navbar-item {
+        &.link-active {
+          background-color: #fafafa;
+          color: #3273dc;
+          border-bottom: 2px solid lightgray;
+        }
+      }
+    }
+  }
+}

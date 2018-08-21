@@ -1,0 +1,24 @@
+.mdc-snackbar--align-start {
+  left: auto !important;
+  right: 24px !important;
+  z-index: 999;
+}
+
+i {
+  font-size: 1.20rem;
+}
+
+a.dropdown-item {
+  padding-right: 0;
+}
+
+.dropdown-item {
+  padding: .375rem .5rem;
+}
+
+.hero {
+  min-height: 100vh;
+  .hero-body {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "amdb-cli",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material/snackbar": "^0.36.0",
+    "axios": "^0.18.0",
+    "bulma": "^0.7.1",
+    "bulma-checkradio": "^2.1.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "scss": "node-sass --watch src/assets/sass/main.scss src/assets/css/main.css"
+  }
+}
