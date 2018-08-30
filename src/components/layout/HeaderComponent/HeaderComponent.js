@@ -8,7 +8,8 @@ class HeaderComponent extends Component{
             active: null,
             routes: [
                 {to: '/collections', name: 'Collections'},
-                {to: '/import-export', name: 'Import/Export'}
+                {to: '/import-export', name: 'Import/Export'},
+                {to: '/utils', name: 'Utility'}
             ]
         };
     }

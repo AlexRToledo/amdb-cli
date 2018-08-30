@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import Json from "../../../core/Json/Json";
 import NotificationsComponent from "../../../core/Components/NotificationsComponent/NotificationsComponent";
-import ImportExportManager from "../../../managers/ImportExportManager/ImportExportManager";
-import ImportComponent from "./ImportComponent/ImportComponent";
-import ExportComponent from "./ExportComponent/ExportComponent";
+import ImportComponent from "./components/ImportComponent/ImportComponent";
+import ExportComponent from "./components/ExportComponent/ExportComponent";
 
 class MainComponent extends Component {
     constructor() {

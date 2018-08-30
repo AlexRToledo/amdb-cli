@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import DocumentManager from "../../../../../managers/DocumentManager/DocumentManager";
 import DocumentModalComponent from "../DocumentModalComponent/DocumentModalComponent";
 import FieldObjectsComponent from "../../../../../core/Components/FieldObjectsComponent/FieldObjectsComponent";

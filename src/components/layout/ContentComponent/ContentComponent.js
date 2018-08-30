@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import CRUDCollections from '../../dashboard/CRUDCollections/MainComponent';
 import ImportExport from '../../dashboard/ImportExport/MainComponent';
+import Utilities from '../../dashboard/Utilities/MainComponent';
 
 class ContentComponent extends Component{
     render() {
@@ -14,6 +15,7 @@ class ContentComponent extends Component{
                         <Switch>
                             <Route exact path='/collections' component={CRUDCollections} />
                             <Route exact path='/import-export' component={ImportExport} />
+                            <Route exact path='/utils' component={Utilities} />
                         </Switch>
                     </div>
                 </div>

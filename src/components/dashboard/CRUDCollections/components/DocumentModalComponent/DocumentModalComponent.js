@@ -35,16 +35,6 @@ class DocumentModalComponent extends IComponent{
         this.props.activeFDM(false);
     }
 
-    handleFields(event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-
-        this.setState({
-            [name]: value
-        });
-    }
-
     async onSubmit(event) {
         try {
             event.preventDefault();

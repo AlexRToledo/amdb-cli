@@ -16,7 +16,7 @@ class Json {
         let data_import = [];
 
         Object.entries(json_data).map((value, key) => {
-            data_import.push({name: value[0], length: value[1].length});
+            return data_import.push({name: value[0], length: value[1].length});
         });
 
         return data_import;
