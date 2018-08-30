@@ -20,7 +20,7 @@ class CollectionDataComponent extends IComponent {
         try {
             if(newProps.collection !== this.props.collection) {
                 this.setState({documentOpen: []});
-                if(newProps.collection !== "empty") {
+                if(newProps.collection !== "") {
                     let response = await this.DocumentManager.GetDocumentsByCollection(newProps.collection);
                     if(!response.error) {
                         this.setState({dataCollection: response.data});

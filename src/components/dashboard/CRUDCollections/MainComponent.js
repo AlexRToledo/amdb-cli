@@ -69,13 +69,42 @@ class MainComponent extends IComponent{
         }
     }
 
+    async dropAllCollections() {
+        try {
+            this.notify("Loading...", true);
+            let response = await this.CollectionManager.DropAllCollection(this.state.collections);
+            if(!response.error) {
+                this.setState({collections: []});
+                this.setState({collectionActive: ""});
+                this.setState({collectionActiveIndex: null});
+                this.Notifications.Show(response.message);
+            }
+        } catch (e) {
+            this.notify("Error can't connect with the server.");
+        }
+    }
+
     async clearCollection(name, index) {
         try {
             this.notify("Loading...", true);
             let response = await this.CollectionManager.ClearCollection(name);
             if(!response.error) {
-                this.setState({collectionActive: "empty"});
+                this.setState({collectionActive: ""});
                 this.setState({collectionActiveIndex: index});
+                this.Notifications.Show(response.message);
+            }
+        } catch (e) {
+            this.notify("Error can't connect with the server.");
+        }
+    }
+
+    async clearAllCollections() {
+        try {
+            this.notify("Loading...", true);
+            let response = await this.CollectionManager.ClearAllCollection(this.state.collections);
+            if(!response.error) {
+                this.setState({collectionActive: ""});
+                this.setState({collectionActiveIndex: null});
                 this.Notifications.Show(response.message);
             }
         } catch (e) {
@@ -123,9 +152,19 @@ class MainComponent extends IComponent{
                             <h1 className={'subtitle'}>
                                 Collections
                                 <a onClick={() => this.createCollectionModal()}>
-                            <span className={'icon has-text-primary'}>
-                                <i className={'typcn typcn-plus'}></i>
-                            </span>
+                                    <span className={'icon has-text-primary'}>
+                                        <i className={'typcn typcn-plus'}></i>
+                                    </span>
+                                </a>
+                                <a onClick={() => this.dropAllCollections()}>
+                                    <span className={'icon has-text-danger'}>
+                                        <i className={'typcn typcn-trash'}></i>
+                                    </span>
+                                </a>
+                                <a onClick={() => this.clearAllCollections()}>
+                                    <span className={'icon has-text-info'}>
+                                        <i className={'typcn typcn-arrow-loop'}></i>
+                                    </span>
                                 </a>
                             </h1>
                             <ul className={'collection-list'}>

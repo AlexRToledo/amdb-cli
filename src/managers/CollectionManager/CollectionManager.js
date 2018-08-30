@@ -22,9 +22,25 @@ class CollectionManager {
         }
     }
 
+    async DropAllCollection(collections) {
+        try {
+            return await this.httpClient.Delete(`${this.api_url}/remove`, {data: collections});
+        } catch (e) {
+
+        }
+    }
+
     async ClearCollection(name) {
         try {
             return await this.httpClient.Delete(`${this.api_url}/${name}/clear`);
+        } catch (e) {
+
+        }
+    }
+
+    async ClearAllCollection(collections) {
+        try {
+            return await this.httpClient.Delete(`${this.api_url}/clear`, {data: collections});
         } catch (e) {
 
         }

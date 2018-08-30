@@ -22,9 +22,14 @@ class HttpClient {
         }
     }
 
-    async Delete (url) {
+    async Delete (url, data = null) {
         try {
-            return this.Response(await Axios.delete(this._apiUrl + url));
+            if(data !== null) {
+                console.log(data)
+                return this.Response(await Axios.delete(this._apiUrl + url, data));
+            } else {
+                return this.Response(await Axios.delete(this._apiUrl + url));
+            }
         } catch (e) {
 
         }
