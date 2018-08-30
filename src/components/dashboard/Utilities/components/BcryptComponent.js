@@ -21,6 +21,9 @@ class BcryptComponent extends IComponent{
             if(this.state.bcrypted_hash !== "") {
                 document.querySelector('#hashCopy').select();
                 document.execCommand('copy');
+                this.setState({
+                    copy: true
+                });
                 this.notify("Copy to clipboard.");
             }
         } catch (e) {
@@ -37,7 +40,8 @@ class BcryptComponent extends IComponent{
             let hash = bcrypt.hashSync(this.state.password, salt);
 
             this.setState({
-                bcrypted_hash: hash
+                bcrypted_hash: hash,
+                copy: false
             });
 
             this.notify("Done.");
